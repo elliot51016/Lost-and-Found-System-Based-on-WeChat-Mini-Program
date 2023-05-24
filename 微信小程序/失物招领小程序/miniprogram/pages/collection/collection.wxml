@@ -1,0 +1,15 @@
+<view class="body">
+   <view wx:if="{{login}}">
+    <Tab bind:getTab="getTab" tabList="{{tabList}}" />
+    <view class="lose-list">
+      <ViewCard wx:for="{{list}}" data="{{item.id}}" wx:key="index" 
+      bindtap="toDetail" data-info="{{item}}"
+      />
+    </view>
+   </view>
+   <view class="unlogin" wx:else="">
+      <image class="icon-unlogin" src="../../images/unlogin.png" mode=""/>
+     <text>请您在我的中登录后查看</text>
+   </view>
+   
+</view>

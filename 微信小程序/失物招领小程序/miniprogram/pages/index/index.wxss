@@ -1,0 +1,21 @@
+
+.banner{
+  height: 400rpx;
+
+}
+
+.banner-image{
+  width: 100%;
+  height: 400rpx;
+
+}
+
+.lose{
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 175rpx; */
+}
+
+.body{
+  padding-bottom: 200rpx ;
+}

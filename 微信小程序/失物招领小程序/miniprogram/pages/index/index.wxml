@@ -1,0 +1,22 @@
+<view class="body">
+<!-- 搜索 -->
+   <SearchInput bindtap="toSearch" />
+<!-- 轮播图 -->
+    <swiper class="banner" indicator-dots="ture"
+        autoplay="false" interval="2000" duration="500">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image class="banner-image" src="{{item}}"> </image>
+          </swiper-item>
+        </block>
+    </swiper>
+<!-- 寻物与寻主的功能部分 -->
+    <Tab bind:getTab="getTab" tabList="{{tabList}}" />
+<!-- 丢失情况卡片 -->
+    <view class="lose">
+      <ViewCard wx:for="{{list}}" wx:key="index" data="{{item}}"
+        bindtap="toDetail" data-info="{{item}}"
+      />
+    </view>
+</view>
+

@@ -1,0 +1,171 @@
+.body{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+  padding: 20rpx 35rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 5rpx solid #f3f3f3;
+}
+
+.top .out{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.top .publish-btn{
+    margin:  0 !important;
+    color: white;
+    background-color: #053276;
+    border-radius: 40rpx;
+    width: 170rpx;
+    padding: 20rpx  50rpx;
+    font-size: 30rpx;
+}
+
+.container{
+  padding:30rpx 35rpx 50rpx 35rpx;
+}
+
+.type {
+  display: flex;
+
+}
+
+.type .type-item{
+  background-color: #F3F3F3;
+  padding: 10rpx 70rpx;
+  border: 1rpx solid #C7C7C8;
+  margin-right: 30rpx;
+  border-radius: 10rpx;
+}
+
+.type .type-select{
+  background-color: #053276;
+  color: #fff;
+}
+
+.classify{
+  margin-top: 50rpx;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.classify .label{
+  margin-right: 20rpx;
+  white-space: nowrap !important;
+  
+}
+
+.classify .picker{
+  width: 100%;
+}
+
+.picker .empty,.select {
+  border: 2rpx solid  #C7C7C8 ;
+  width: 100%;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #84848a;
+  font-size: 30rpx;
+}
+.picker .select{
+    color: black !important;
+
+}
+
+.empty .select-icon{
+  width: 40rpx; 
+  height: 40rpx; 
+}
+
+.select .select-icon{
+  width: 40rpx; 
+  height: 40rpx; 
+}
+
+.input-list{
+  padding:  30rpx 15rpx ;
+  padding-top: 80rpx;
+  border-bottom: 5rpx solid #f3f3f3;
+  font-size: 30rpx;
+}
+
+.input-item{
+  margin-bottom: 50rpx;
+}
+
+.desc{
+  padding: 30rpx 15rpx;
+  border-bottom: 5rpx solid #f3f3f3;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.desc .close-item{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 0;
+}
+
+.upload{
+  padding-top: 20rpx;
+}
+
+.upload .upload-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.upload .upload-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+
+}
+
+.upload .upload-list .default{
+  width: 33%;
+  height: 226rpx;
+  
+}
+
+.img-list{ 
+  width: 33%;
+  height: 226rpx;
+  position: relative;
+}
+.img-list .common{
+  width: 100%;
+  height: 100%;
+
+}
+
+.img-list .delete{
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  top: 0rpx  ;
+  right: 0rpx;
+  z-index: 10;
+}
+
+.error-tips{
+  color: red;
+  font-size: 26rpx ;
+}

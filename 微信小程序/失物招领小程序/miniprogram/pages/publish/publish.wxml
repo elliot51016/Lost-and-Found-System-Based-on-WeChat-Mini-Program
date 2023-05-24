@@ -1,0 +1,96 @@
+<view class="body">
+  <view class="top">
+    <image class="out" src="../../images/out.png" bindtap="backPage" mode="" />
+    <button class="publish-btn" bindtap="toPublish">
+    {{id ? "修改" : "发布"}}
+    </button>
+  </view>
+
+  <view class="container">
+    <view class="type">
+      <view class="type-item  {{ type === '0' ?'type-select':''}}" bindtap="selectType" 
+      data-id="0">  寻主    </view>
+      <view class="type-item  {{ type === '1' ?'type-select':''}}"  bindtap="selectType" 
+      data-id="1">   寻物   </view>
+    </view>
+    <view class="error-tips" wx:if="{{type_check}}">
+          请选择寻物或寻主
+    </view>
+    <view class="classify">
+      <text class="label">物品类别：</text>
+      <picker
+     class="picker"
+     mode="multiSelector" 
+     bindchange="bindMultiPickerChange" 
+     bindcolumnchange="bindMultiPickerColumnChange" 
+         value="{{multiIndex}}"
+         range="{{multiArray}}">
+
+        <view class="picker-item">
+          <view class="select" wx:if="{{select}}">
+          <text> {{multiArray[0][multiIndex[0]]}}/{{multiArray[1][multiIndex[1]]}}</text>
+            <image catchtap="closeSelect" class="select-icon" src="../../images/close.png" mode=""/>
+          </view>
+
+          <view class="empty" wx:else>
+            <text >请选择</text>
+            <image  class="select-icon" src="../../images/select.png" mode=""/>
+          </view>
+        
+        </view>
+
+      </picker>
+    </view>
+
+    <view class="input-list">
+     <view class="input-item" >
+      <input bindinput="getName"   value="{{name}}"  placeholder="请输入物品名称" type="text"/>
+      <view class="error-tips" wx:if="{{name_check}}">
+          请输入少于20字的物品名称
+    </view>
+     </view>
+     <view class="input-item">
+      <input  bindinput="getDate"   value="{{date}}" placeholder="请输入丢失/拾取时间" type="text"/>
+      <view class="error-tips" wx:if="{{date_check}}">
+          请输入少于20字的时间点
+    </view>
+     </view>
+     <view class="input-item" >
+      <input bindinput="getRegion" value="{{region}}" placeholder="请输入丢失/拾取地点" type="text"/>
+      <view class="error-tips" wx:if="{{region_check}}">
+          请输入少于20字的地点
+    </view>
+     </view>
+     <view  class="input-item">
+      <input bindinput="getPhone" value="{{phone}}"  placeholder="如何联系你？如：QQ：1297298401等" type="text"/>
+      <view class="error-tips" wx:if="{{phone_check}}">
+          请输入少于30字的联系信息
+      </view>
+     </view>
+      
+    </view>
+
+    <view class="desc">
+        <textarea value=""  bindinput="getDesc" value="{{desc}}" placeholder="请输入物品描述" />
+        <image class="close-item" bindtap="deleteDesc"  src="../../images/close.png" wx:if="{{desc.length>0}}" mode=""/>
+    </view>
+
+    <view class="upload">
+      <view class="upload-top" >
+        <text>最多选择6张图片</text>
+        <text>{{imgList.length}}/6</text>
+      </view>
+      
+        <view class="upload-list">
+          <view class="img-list" wx:for="{{imgList}}" wx:key="index">
+            <image wx:if="{{item}}" class="common" src="{{item}}" rel="noreferrer" mode=""/>
+            <image class="delete" src="../../images/img-delete.png" bindtap="deleteImg" data-index="index" mode=""/>
+          </view>
+          <image wx:if="{{imgList.length<6}}"  class="default" src="../../images/upload.png" 
+          bindtap="uploadImg"
+          mode=""/>
+        </view>
+
+    </view>
+  </view>
+</view>

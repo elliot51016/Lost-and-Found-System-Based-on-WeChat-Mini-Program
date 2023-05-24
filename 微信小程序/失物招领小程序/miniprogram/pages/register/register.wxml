@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+<view class="body">
+    <image class="icon-cidp" src="../../images/iconCidp.png" mode=""/>
+    <view class="container">
+      <input class="input" placeholder="请输入账号" type="text" bindinput="getUserName"  />
+      <input class="input" placeholder="请输入密码" type="password" bindinput="getPassword" />
+      <input class="input" placeholder="请再次确认密码" type="password" bindinput="getConfirmPwd"/>
+      <text class="to-register" bindtap="toLogin">去登陆</text>
+      <button class="login-btn" type="primary" bindtap="submit" >注册</button>
+    </view>
+</view>

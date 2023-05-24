@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/collection/collection",
+    "pages/me/me",
+    "pages/myPublish/myPublish",
+    "pages/myCollection/myCollection",
+    "pages/myInfo/myInfo",
+    "pages/infoDetail/infoDetail",
+    "pages/search/search",
+    "pages/publish/publish",
+    "pages/classifyList/classifyList",
+    "pages/searchResult/searechResult",
+    "pages/login/login",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#053276",
+    "navigationBarTitleText": "失物招领",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index_fill.png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/classify.png",
+      "selectedIconPath": "images/classify_fill.png"
+    },
+    {
+      "pagePath": "pages/collection/collection",
+      "text": "收藏",
+      "iconPath": "images/collection.png",
+      "selectedIconPath": "images/collection_fill.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me_fill.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
